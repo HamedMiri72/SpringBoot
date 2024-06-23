@@ -17,6 +17,8 @@ public class HomeController
     public String home(){
         System.out.println("hi world");
         //controller you are responsible to call this home.jsp page
-        return "home.jsp";
+        return "home";
+        //path of the page is defined by prefix and the extention of the page is defined with the help of surffix so we can remove .jsp
+        
     }
 }
