@@ -31,14 +31,21 @@ public class HomeController
 //        //controller you are responsible to call this home.jsp page
 //        return "home";
 //        //path of the page is defined by prefix and the extention of the page is defined with the help of surffix so we can remove .jsp
-        public ModelAndView home(@RequestParam("name") String  myName)
-    {
-        //can hold to things the first one view ,name  and the second one is data so we can add as much object as we want
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("name", myName);
-        mv.setViewName("home");
-        return mv;
+//        public ModelAndView home(@RequestParam("name") String  myName)
+//    {
+//        //can hold to things the first one view ,name  and the second one is data so we can add as much object as we want
+//        ModelAndView mv = new ModelAndView();
+//        mv.addObject("name", myName);
+//        mv.setViewName("home");
+//        return mv;
         //so we accepting a home request and then we accepting a name and we send data and view name
         //
+
+    public ModelAndView home(Alien alien)
+    {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("obj", alien);
+        mv.setViewName("home");
+        return mv;
     }
 }
